@@ -3,18 +3,18 @@ resource "aws_iam_role" "hello" {
   name = "iam_role_hello"
   path = "/"
 
-# EOF는 indent에 매우 민감하다. jsonencode 쓰는게 편함
+  # EOF는 indent에 매우 민감하다. jsonencode 쓰는게 편함
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
     Statement = [
-        {
-            Action: "sts:AssumeRole"
-            Sid: "",
-            Effect: "Allow",
-            Principal: {
-                Service: "ec2.amazonaws.com"
-            },
-        }
+      {
+        Action : "sts:AssumeRole"
+        Sid : "",
+        Effect : "Allow",
+        Principal : {
+          Service : "ec2.amazonaws.com"
+        },
+      }
     ]
   })
 }
@@ -22,18 +22,18 @@ resource "aws_iam_role" "hello" {
 # policy -> user, group, role에 할당 가능한데, 테라폼에서는 각각 user_policy, group_policy, role_policy로 할당함.
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy
 resource "aws_iam_role_policy" "hello_s3" {
-  name = "iam_role_hello_s3"  
+  name = "iam_role_hello_s3"
   role = aws_iam_role.hello.id
   policy = jsonencode({
-      Version = "2012-10-17",
-      Statement = [
-          {
-              Action: "s3:GetObject",
-              Sid: "AllowAppArtifactsReadAccess",
-              Resource: "*",
-              Effect: "Allow"
-          }
-      ]
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Action : "s3:GetObject",
+        Sid : "AllowAppArtifactsReadAccess",
+        Resource : "*",
+        Effect : "Allow"
+      }
+    ]
   })
 }
 

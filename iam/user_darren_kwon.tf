@@ -19,8 +19,8 @@ resource "aws_iam_user_policy" "name" {
     Version = "2012-10-17",
     Statement = [
       {
-        Action = ["*"],
-        Effect = "Allow",
+        Action   = ["*"],
+        Effect   = "Allow",
         Resource = ["*"]
       }
     ]

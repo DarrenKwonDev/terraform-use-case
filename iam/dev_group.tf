@@ -9,8 +9,8 @@ resource "aws_iam_group_membership" "dev_membership" {
   name = aws_iam_group.dev_group.name
 
   # 추가할 유저
-  users = [ 
-      aws_iam_user.darren-kwon.name
+  users = [
+    aws_iam_user.darren-kwon.name
   ]
 
   group = aws_iam_group.dev_group.name
