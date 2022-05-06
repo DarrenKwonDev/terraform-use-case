@@ -18,7 +18,7 @@ resource "aws_s3_bucket_versioning" "tfstate-s3-versioning" {
 resource "aws_dynamodb_table" "tfstate_state_lock" {
   name         = "terraform-lock"
   billing_mode = "PAY_PER_REQUEST"
-  hash_key     = "LockID" # 파티션 키
+  hash_key     = "LockID" # 파티션 키. 문서에 따르면 locking용으로 사용한다면 반드시 파티션 키의 이름이 LockID여야만 함
 
   # Only required for hash_key and range_key attributes. 
   # hash_key에 대한 name, type을 지정
