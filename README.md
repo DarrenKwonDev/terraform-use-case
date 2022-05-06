@@ -8,3 +8,7 @@ https://www.terraform.io/
 s3 bucket policy
 
 https://techblog.woowahan.com/6217/
+
+policy evaluation logic
+
+https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/reference_policies_evaluation-logic.html
