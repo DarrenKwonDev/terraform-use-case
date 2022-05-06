@@ -1,8 +1,8 @@
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
-resource "aws_s3_bucket" "main" {
-  bucket = "devopsart-terraform-101"
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "terrfaform-generated-bucket"
 
   tags = {
-    Name = "devopsart-terraform-101"
+    "Name" = "terrfaform-generated-bucket"
   }
 }
