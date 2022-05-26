@@ -26,3 +26,11 @@ https://techblog.woowahan.com/6217/
 ### policy evaluation logic
 
 https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/reference_policies_evaluation-logic.html
+
+## ETC
+
+### best practice
+
+https://github.com/ozbillwang/terraform-best-practices
+
+https://github.com/DevopsArtFactory/aws-provisioning
