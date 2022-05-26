@@ -26,6 +26,7 @@ resource "aws_subnet" "private_subnet" {
   }
 }
 
+# IGW는 VPC당 1개만 존재할 수 있음에 유의
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
 
