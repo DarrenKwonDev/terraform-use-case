@@ -12,3 +12,8 @@ https://techblog.woowahan.com/6217/
 policy evaluation logic
 
 https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/reference_policies_evaluation-logic.html
+
+variables
+https://www.terraform.io/language/values/variables  
+선언 -> variables.tf  
+주입 -> terraform.tfvars
