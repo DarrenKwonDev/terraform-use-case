@@ -1,5 +1,7 @@
 # terraform examples
 
+Terraform v1.1.9 on darwin_amd64
+
 ## terraform docs
 
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs  
