@@ -15,6 +15,15 @@ https://www.terraform.io/language/values/variables
 선언 -> variables.tf  
 variables.tf 에 선언한 변수에 변수 주입 -> terraform.tfvars
 
+### output
+
+https://www.terraform.io/language/values/outputs  
+terraform output [Name]
+
+### data source
+
+https://www.terraform.io/language/data-sources
+
 ### function
 
 https://www.terraform.io/language/functions
