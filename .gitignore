@@ -32,3 +32,4 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+gcp-study-358716-fc84c4978442.json

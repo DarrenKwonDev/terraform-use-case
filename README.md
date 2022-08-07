@@ -4,7 +4,8 @@ Terraform v1.1.9 on darwin_amd64
 
 ## terraform docs
 
-https://registry.terraform.io/providers/hashicorp/aws/latest/docs  
+[aws](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)  
+[gcp](https://registry.terraform.io/providers/hashicorp/google/latest/docs)  
 https://www.terraform.io/
 
 ## terraform feature
@@ -25,10 +26,11 @@ data source -> https://www.terraform.io/language/data-sources
 
 function -> https://www.terraform.io/language/functions
 
+backend -> tfstate는 가급적 [remote backend](https://www.terraform.io/language/settings/backends/configuration)에 저장할 것
+
 ## tips
 
 - 시크릿은 AWS 시크릿 매니저, kms, GCP google_secret_manager_secret 등을 data source로 통해서 가져와 사용 하는 것이 바람직하다.
--
 
 ## AWS
 
