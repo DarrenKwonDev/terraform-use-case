@@ -44,16 +44,21 @@ https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/reference_policies_evalua
 
 ### s3 backend
 
-[생성]  
+[backend 동적 구성]
+backend에는 변수나 참조를 사용할 수 없음. 그래서 작업마다 backend를 변경해야 한다면 hcl 파일을 별도로 생성한 다음 terraform init을 호출할 때   -backend-config 인수를 주어 변경시키는 방식으로 교체하는게 그나마 자동화된 방식임.  
+
+아니면 그냥 terragrunt를 사용하는 것이 좋다. 이미 회사에서도 terragrunt 사용 중.  
+
+[backend 생성]  
 백엔드로 지정할 리소스가 기 존재해야만 하기 때문에 s3 backend 구동에는 순서를 지켜야 함.
 
-1. s3와 dynamoDB를 우선 apply하여 생성해놓고
-2. 그 다음에 backend를 지정하여 다시 apply
+1. s3와 dynamoDB를 우선 apply하여 생성해놓고  
+2. 그 다음에 backend를 지정하여 다시 terraform init 후  apply  
 
-[삭제]
+[backend 삭제]
 
-1. backend 설정을 제거하고, init을 통해 tfstate를 로컬에 복사해놓아야 함
-2. 그 다음에 destory 명령을 통해서 리소스를 삭제 함
+1. backend 설정을 제거하고, terraform init.  
+2. 그 다음에 destroy 명령을 통해서 리소스를 삭제 함  
 
 ## ETC
 
