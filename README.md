@@ -26,7 +26,7 @@ data source -> https://www.terraform.io/language/data-sources
 
 function -> https://www.terraform.io/language/functions
 
-backend -> tfstate는 가급적 [remote backend](https://www.terraform.io/language/settings/backends/configuration)에 저장할 것
+backend -> tfstate는 가급적 [backend](https://www.terraform.io/language/settings/backends/configuration)에 저장할 것
 
 ## tips
 
@@ -48,6 +48,7 @@ https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/reference_policies_evalua
 backend에는 변수나 참조를 사용할 수 없음. 그래서 작업마다 backend를 변경해야 한다면 hcl 파일을 별도로 생성한 다음 terraform init을 호출할 때   -backend-config 인수를 주어 변경시키는 방식으로 교체하는게 그나마 자동화된 방식임.  
 
 아니면 그냥 terragrunt를 사용하는 것이 좋다. 이미 회사에서도 terragrunt 사용 중.  
+remote_state를 통해서 backend를 생성하면 후술할 테라폼 구동 시 이미 bucket이 존재하기를 기대하는 것을 회피하고 처음부터 설정하여 사용할 수 있게 되어 편함.  
 
 [backend 생성]  
 백엔드로 지정할 리소스가 기 존재해야만 하기 때문에 s3 backend 구동에는 순서를 지켜야 함.
@@ -64,5 +65,10 @@ backend에는 변수나 참조를 사용할 수 없음. 그래서 작업마다 b
 
 ### best practice
 
-https://github.com/ozbillwang/terraform-best-practices
-https://github.com/DevopsArtFactory/aws-provisioning
+[terraform-best-practices](https://github.com/ozbillwang/terraform-best-practices)  
+[aws-provisioning](https://github.com/DevopsArtFactory/aws-provisioning)
+
+### tools  
+
+[tfsec](https://github.com/aquasecurity/tfsec)  
+
